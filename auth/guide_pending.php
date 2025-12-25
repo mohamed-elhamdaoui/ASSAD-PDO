@@ -1,4 +1,4 @@
-<?php include 'includes/header.php'; ?>
+<?php include '../includes/header.php'; ?>
 
 <div class="container my-5 text-center py-5">
     <div class="row justify-content-center">
@@ -14,4 +14,4 @@
     </div>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
