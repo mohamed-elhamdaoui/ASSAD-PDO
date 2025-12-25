@@ -1,30 +1,30 @@
-<?php include 'includes/header.php'; ?>
+<?php include '../includes/header.php'; ?>
 
 <?php
-include 'config/connection.php';
+// include 'config/connection.php';
 
 
 
 
-if (isset($_POST["save"])) {
-    $nom = $_POST["nom"];
-    $role = $_POST["role"];
-    $email = $_POST["email"];
-    $motpasse = $_POST["motpasse"];
+// if (isset($_POST["save"])) {
+//     $nom = $_POST["nom"];
+//     $role = $_POST["role"];
+//     $email = $_POST["email"];
+//     $motpasse = $_POST["motpasse"];
 
 
-    $sql = "insert into utilisateurs (nom , email , role , motpasse_hash) values ('$nom' , '$email' , '$role' ,'$motpasse');";
+//     $sql = "insert into utilisateurs (nom , email , role , motpasse_hash) values ('$nom' , '$email' , '$role' ,'$motpasse');";
     
-    $conn->query($sql);
+//     $conn->query($sql);
 
-    if($role == 'Visiteur'){
-        header("location: login.php");
-    }
-    if($role == 'Guide'){
-        header("location: guide_pending.php");
-    }
+//     if($role == 'Visiteur'){
+//         header("location: login.php");
+//     }
+//     if($role == 'Guide'){
+//         header("location: guide_pending.php");
+//     }
 
-}
+// }
 
 
 
@@ -72,4 +72,4 @@ if (isset($_POST["save"])) {
     </div>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
