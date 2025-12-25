@@ -1,0 +1,141 @@
+/* ==========================================================================
+   PROJET ASSAD ZOO - CAN 2025 MAROC
+   Fichier de styles global (Front-end uniquement)
+   ========================================================================== */
+
+:root {
+    --maroc-red: #c1272d;
+    --maroc-green: #006233;
+    --gold: #d4af37;
+    --dark-grey: #1a1a1a;
+    --light-grey: #f4f7f6;
+    --white: #ffffff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Layout Général --- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .navbar-brand, .oswald {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+/* --- Header & Navigation --- */
+.navbar {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid var(--maroc-green);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--gold) !important;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    position: relative;
+    padding: 100px 0;
+    background-color: #000;
+    color: var(--white);
+}
+
+/* --- Cards (Animaux & Visites) --- */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    border-radius: 12px 12px 0 0;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* --- Boutons Personnalisés --- */
+.btn-maroc {
+    background-color: var(--maroc-red);
+    color: var(--white);
+    border: none;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 50px;
+}
+
+.btn-maroc:hover {
+    background-color: #a01f24;
+    color: var(--white);
+}
+
+.btn-atlas {
+    background-color: var(--maroc-green);
+    color: var(--white);
+    border-radius: 50px;
+}
+
+.btn-outline-gold {
+    border: 2px solid var(--gold);
+    color: var(--gold);
+}
+
+/* --- Badges & Statuts --- */
+.badge {
+    padding: 0.5em 0.8em;
+    font-weight: 500;
+}
+
+/* --- Tableaux (Admin/Guide) --- */
+.table {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: var(--dark-grey);
+    color: var(--white);
+}
+
+/* --- Formulaires --- */
+.form-control:focus {
+    border-color: var(--maroc-green);
+    box-shadow: 0 0 0 0.25rem rgba(0, 98, 51, 0.1);
+}
+
+/* --- Footer --- */
+footer {
+    border-top: 5px solid var(--gold);
+}
+
+/* --- Animations Utils --- */
+.fade-in {
+    animation: fadeIn 0.8s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
