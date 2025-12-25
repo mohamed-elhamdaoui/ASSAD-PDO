@@ -1,35 +1,9 @@
 
 <?php
-include 'includes/header.php';
-include 'config/connection.php';
+include '../includes/header.php';
 
 
 
-if (isset($_POST["login"])) {
-
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-
-    $sql = "select * from utilisateurs where motpasse_hash = '$password' and email = '$email'; ";
-    $result = $conn->query($sql);
-    // echo $sql;
-    if ($result->num_rows > 0) {
-        $user = $result->fetch_assoc();
-        $_SESSION["id"] = $user["id"];
-        $_SESSION["role"] = $user["role"];
-        $_SESSION["nom"] = $user["nom"];
-
-        if($_SESSION["role"]== 'Visiteur'){
-            header("location: profile.php");
-        }if($_SESSION["role"]== 'Guide'){
-            header("location: guide_dashboard.php");
-        }if($_SESSION["role"]== 'Admin'){
-            header("location: admin_dashboard.php");
-        }
-    }
-
-    
-}
 
 ?>
 
@@ -64,4 +38,4 @@ if (isset($_POST["login"])) {
     </div>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
