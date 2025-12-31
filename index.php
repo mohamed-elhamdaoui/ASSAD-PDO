@@ -16,7 +16,7 @@
         <div class="col-md-6">
             <h2 class="display-4 text-success">L'emblème : Le Lion de l'Atlas</h2>
             <p class="lead">Symbole de force et de fierté pour le Maroc, venez découvrir notre zone dédiée à l'animal sacré de la nation hôte de la CAN 2025.</p>
-            <a href="asaad_lion.php" class="btn btn-outline-danger">Découvrir le Lion de l'Atlas</a>
+            <a href="/visiteur/asaad_lion.php" class="btn btn-outline-danger">Découvrir le Lion de l'Atlas</a>
         </div>
         <div class="col-md-6">
             <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-pill shadow" alt="Lion de l'Atlas">
