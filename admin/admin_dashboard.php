@@ -20,8 +20,6 @@ $allanimlas = Animal::getAll($pdo);
 
 
 
-// // ICI : Tu devras créer ta requête pour compter les commentaires 'en_attente'
-// // $comment_query = ...
 ?>
 
 <div class="container my-5">
