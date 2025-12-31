@@ -9,7 +9,7 @@
             <div class="alert alert-info">
                 Votre profil est actuellement en cours de revue par nos administrateurs. Vous recevrez un email dès que votre accès au tableau de bord sera activé.
             </div>
-            <a href="index.php" class="btn btn-outline-secondary mt-3">Retour à l'accueil</a>
+            <a href="/index.php" class="btn btn-outline-secondary mt-3">Retour à l'accueil</a>
         </div>
     </div>
 </div>
