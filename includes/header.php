@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 
 /**
@@ -27,7 +27,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="index.php">
+        <a class="navbar-brand d-flex align-items-center" href="/index.php">
             <span class="oswald">ASSAD ZOO</span>
             <span class="badge bg-danger ms-2">MAROC 2025</span>
         </a>
@@ -45,7 +45,7 @@
 
             <ul class="navbar-nav ms-auto">
                 
-                <?php if (!isset($_SESSION['id'])): ?>
+                <?php if (!isset($_SESSION["user_id"])): ?>
                     <li class="nav-item"><a class="nav-link" href="/auth/login.php">Connexion</a></li>
                     <li class="nav-item"><a class="nav-link btn btn-maroc ms-lg-2" href="/auth/register.php">Inscription</a></li>
 
@@ -63,7 +63,7 @@
                             
                             <?php if ($_SESSION["role"] === 'Visiteur'): ?>
                                 <li><a class="dropdown-item" href="profile.php"><i class="fas fa-user me-2"></i>Mon Profil</a></li>
-                                <li><a class="dropdown-item" href="my_reservations.php"><i class="fas fa-ticket-alt me-2"></i>Mes Réservations</a></li>
+                                <li><a class="dropdown-item" href="/visiteur/my_reservations.php"><i class="fas fa-ticket-alt me-2"></i>Mes Réservations</a></li>
 
                             <?php elseif ($_SESSION["role"] === 'Guide'): ?>
                                 <li><a class="dropdown-item" href="profile.php"><i class="fas fa-user me-2"></i>Mon Profil</a></li>
@@ -85,7 +85,7 @@
                             <?php endif; ?>
 
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item text-danger" href="logout.php"><i class="fas fa-sign-out-alt me-2"></i>Déconnexion</a></li>
+                            <li><a class="dropdown-item text-danger" href="/auth/logout.php"><i class="fas fa-sign-out-alt me-2"></i>Déconnexion</a></li>
                         </ul>
                     </li>
                 <?php endif; ?>
